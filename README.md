@@ -1,14 +1,14 @@
-# Welcome to Inventory Management System!
+# Welcome to the MoodMe_Assessment!
 
-Welcome to **Inventory Management System!**! This application handles interactions between USERS and INVENTORIES. The users are able to read the inventories and add to cart which effects the quantity of the inventory in the database. The Admin is able to create, read, update and delete inventories.
+Welcome to **MoodMe_Assessment!**! This application handles MongoDB interactions. You are able to get the list of restaurants and paginate them if you want and you are also able to get restaurant by name.
 
-## API Docs - [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/16662064-71cdbe60-1d5e-475e-b60f-f326c963bac2?action=collection%2Ffork&collection-url=entityId%3D16662064-71cdbe60-1d5e-475e-b60f-f326c963bac2%26entityType%3Dcollection%26workspaceId%3D24efdb0c-14e4-43fd-8122-b6099a2323e5)
+## API Docs - [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/16662064-cea8be4f-1460-4028-a68d-5f32e4c8ff5e?action=collection%2Ffork&collection-url=entityId%3D16662064-cea8be4f-1460-4028-a68d-5f32e4c8ff5e%26entityType%3Dcollection%26workspaceId%3Ddd8e1d32-b764-4b97-a672-e93e05490174)
 
 ## Getting the App Locally
 
 Clone this repository with this command
 ```bash
-git clone https://github.com/Smeks-ops/inventory-management.git
+git clone https://github.com/Smeks-ops/MoodMe_Assesment
 ```
 
 # Technology Stack
@@ -25,19 +25,7 @@ The application uses the following technology tools:
 
 The application handles the following requests:
 
-- User creation and authentication
-
-- Admin creation and authentication
-
-- Admin CRUD operation
-
-- User READ operation
-
-- Endpoints Authorization
-
-- Inventory creation and interraction with Admin
-
-- Inventory CRUD operations
+- Getting restaurants by paginating them and by name of the restaurant.
 
 # Installation and Running
 
@@ -49,4 +37,4 @@ The application handles the following requests:
 
 # Deployment
 
-Heroku: [![https://inventory-managementsystem.herokuapp.com/]]
+Heroku: [![https://moodme-assesment.herokuapp.com/]]
