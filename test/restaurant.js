@@ -22,43 +22,36 @@ describe('/GET ', () => {
   });
 });
 
-//Post inventories
-describe('inventories', () => {
-  describe('/inventory inventory', () => {
-    it('it should return an error because a token has to be passed', (done) => {
-      const inventory = {
-        name: 'spoon',
-      };
-      chai.request(index)
-        .post('/inventory')
-        .send(inventory)
-        .end((err, res) => {
-          res.should.have.status(400);
-          res.body.should.be.a('object');
-          res.body.should.have.property('message').eql('No token provided.');
-          done();
-        });
+//Get Restaurants
+describe('/GET ', () => {
+  it('it should return a response with an object when you call the get restaurants url', (done) => {
+    chai.request(index)
+      .get('/restaurants')
+      .end((err, res) => {
+        res.statusCode.should.eql(200);
+        res.status.should.eql(200);
+        res.should.be.an('object');
+        res.body.should.have.property('message').eql('Restaurants successfully fetched');
+        res.body.should.have.property('data');
+        done();
+      });
     });
   });
-});
 
-//update route test
-describe('inventories', () => {
-  describe('/inventory inventory', () => {
-    it('it should return an error because a token has to be passed', (done) => {
-      const inventory = {
-        name: 'spoon',
-      };
+  //Get Restaurant By Name
+  describe('/GET ', () => {
+    it('it should return a response with an object when you call the get restaurant by name url', (done) => {
       chai.request(index)
-        .put('/inventory/:id')
-        .send(inventory)
+        .get('/restaurants/name')
         .end((err, res) => {
-          res.should.have.status(400);
-          res.body.should.be.a('object');
-          res.body.should.have.property('message').eql('No token provided.');
+          res.statusCode.should.eql(200);
+          res.status.should.eql(200);
+          res.should.be.an('object');
+          res.body.should.have.property('message').eql('Restaurant successfully fetched');
+          res.body.should.have.property('data');
           done();
         });
+      });
     });
-  });
-});
+     
 

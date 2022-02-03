@@ -24,9 +24,8 @@ module.exports = {
     async getRestaurantByName(req, res) {
       try {
         const name = req.query;
-        console.log(name);
         const restaurantData = await service.getRestaurantByName(name);
-       return res.status(200).send({
+        return res.status(200).send({
         error: false,
         code: 200,
         message: 'Restaurant successfully fetched',
