@@ -27,7 +27,7 @@ app.use(restaurant);
 
 //Default route
 app.get('/', (req, res) => {
-  consola.info('Welcome to the moodme_assessment');
+  consola.info('Welcome to the moodMe_assessment');
   res.sendFile(__dirname + "/postmanDoc.html");
 });
 
