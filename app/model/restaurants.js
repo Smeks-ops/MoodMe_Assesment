@@ -4,11 +4,13 @@ const { Schema } = mongoose;
 
 const restaurantSchema = new Schema(
   {
-    _id: {
-      type: String,
-    },
     address: {
-      type: Object,
+      building: {
+        type: String,
+      },
+      street: {
+        type: String,
+      }
     },
     cuisine: {
       type: String,
@@ -23,11 +25,9 @@ const restaurantSchema = new Schema(
       type: String,
     }
   },
-  {
-    timestamps: true,
-  },
+  
 );
 
-const restaurantModel = mongoose.model('restaurant', restaurantSchema);
+const restaurantModel = mongoose.model('restaurants', restaurantSchema);
 
 module.exports = restaurantModel;

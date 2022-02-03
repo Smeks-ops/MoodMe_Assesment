@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "mocha --timeout 10000 --exit",
     "lint": "eslint",
     "lint-all": "eslint index.js test/test"
@@ -19,7 +20,8 @@
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "mongoose": "^5.10.9",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
   },
   "devDependencies": {
     "chai": "^4.3.4",

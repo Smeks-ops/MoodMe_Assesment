@@ -4,13 +4,21 @@ const restaurantModel = require('../model/restaurants');
 
 
 module.exports = {
-    async getRestaurants() {
-        try {
-          const restaurantData = await restaurantModel.find();
-          const restaurant = restaurantData[0].toObject();
-          return restaurant;
-        } catch (e) {
-          console.log('an error occurred while getting restaurants', e);
-        }
+    async getRestaurants(req, res) {
+      const limit = parseInt(req.params.limit)
+      const skip = parseInt(req.params.skip)
+      try {
+        const restaurantData = await restaurantModel.find()
+        .limit(limit * 1)
+        .skip(skip * 1)
+        .exec()
+          
+     
+        return restaurantData;
+      } catch (e) {
+        console.log('an error occurred while getting restaurants', e);
+      }
       },
+
 }
+
